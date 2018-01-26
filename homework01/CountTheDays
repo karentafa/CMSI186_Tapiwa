@@ -1,0 +1,14 @@
+public class CountTheDays {
+	public static void main (String[] args) {
+
+    long[]dates = new long[6];
+
+    for( int i = 0; i <6; i++) {
+
+    dates[i] = long.parseLong(args[i]);
+    }
+    long result = CalendarStuff.daysBetween(dates[0],dates[1],dates[2],dates[3],dates[4],dates[5]);
+
+    System.out.println(result);
+	}
+}
