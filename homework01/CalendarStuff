@@ -40,6 +40,8 @@ public class CalendarStuff {
   /**
    * A listing of the months of the year, assigning numbers; I suppose these could be ENUMs instead, but whatever
    */
+
+
    private static final int JANUARY    = 0;
    private static final int FEBRUARY   = JANUARY   + 1;
    private static final int MARCH   = FEBRUARY   + 1;
@@ -52,6 +54,7 @@ public class CalendarStuff {
    private static final int OCTOBER   = SEPTEMBER   + 1;
    private static final int NOVEMBER   = OCTOBER   + 1;
    private static final int DECEMBER   = NOVEMBER   + 1;
+ 
   // you can finish these on your own, too
   
   /**
@@ -60,6 +63,7 @@ public class CalendarStuff {
    *  NOTE: this is optional, but suggested
    */
    private static int[]    days        = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+ 
 
 
   /**
@@ -80,6 +84,14 @@ public class CalendarStuff {
     return true;
   } else {
     return false;
+  }  // replace this with the actual code
+   }
+
+   public static int LeapYearDays( int year ) {
+      if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))) {
+    return year;
+  } else {
+    return 0;
   }  // replace this with the actual code
    }
 
@@ -285,20 +297,36 @@ public class CalendarStuff {
    */
    public static long daysBetween( long month1, long day1, long year1, long month2, long day2, long year2 ) {
 
+   
 
-    
-        long m1 = (month1 + 9) % 12;
-        long y1 = year1 - month1 / 10;
-        long x1= 365*y1 + y1/4 - y1/100 + y1/400 + (m1*306 + 5)/10 + ( day1 - 1 );
-        long m2 = (month2 + 9) % 12;
-        long y2 = year2 - m2 / 10;
-        long x2= 365*y2 + y2/4 - y2/100 + y2/400 + (m2*306 + 5)/10 + ( day2 - 1 );
+   int y1 = (int) year1;
+   int y2 = (int) year2;
+   int d1 = (int) day1;
+   int d2 = (int) day2;
+   int m1 = (int) month1;
+   int m2 = (int) month2;
 
-          return x2 - x1;
+int n1 = ((int)y1 * 365) + (int)d1;
 
+int i=0;
 
-        }
+    for ( i=0; i<m1 - 1; i++) 
 
+      
+        n1 += days[(int)m1 -1];
+ 
+    int n3 = n1 + LeapYearDays(y1);
 
+ 
+    int n2 = (y2*365) + d2;
+
+    for (i=0; i<m2 - 1; i++) 
+        n2 += days[(int)m2 -1];
+   int n4 = n2 + LeapYearDays(y2);
+
+    long result=  (long)n4 - (long)n3;
+
+    { return result; }
+  }
 }
 
