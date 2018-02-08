@@ -1,7 +1,7 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *  File name     :  StringStuff.java
  *  Purpose       :  A file full of stuff to do with the Java String class
- *  Author        :  B.J. Johnson
+ *  Author        :  Tapiwa Tafa
  *  Date          :  2017-01-19
  *  Description   :  This file presents a bunch of String-style helper methods.  Although pretty much
  *                   any and every thing you'd want to do with Strings is already made for you in the
@@ -109,57 +109,25 @@ public class StringStuff {
    */
    public static String evensOnly( String s ) {
     
+      String result = new String();
+
+      for (int i = 0; i < s.length(); i++)  {
+
+         char c = s.charAt(i);
+
+         if (c == 'B' || c == 'D' || c == 'F' || c == 'H' || c == 'J' || c == 'L' || c == 'N'  || c == 'P' || c == 'R' || c == 'T' || c == 'V' || c == 'X' || c == 'Z' 
+            || c == 'b' || c == 'd' || c == 'f' || c == 'h' || c == 'j' || c == 'l' || c == 'n'  || c == 'p' || c == 'r' || c == 't' || c == 'v' || c == 'x' || c == 'z' 
+
+            ) {
+
+            result += new Character(c).toString();
+         } 
    
-   /**for(int i = 0; i < s.length(); i++) {
-                                         
-  
-      char c = s.charAt(i);
-
-      if (c == 'B' || c == 'D' || c == 'F' || c == 'H' || c == 'J' || c == 'L' || c == 'N'  || c == 'P' || c == 'R' || c == 'T' || c == 'V' || c == 'X' || c == 'Z' ) {
-
-        
-
-        return new String (String.valueOf(c));
       }
 
-      if (c !== 'B' || c !== 'D' || c !== 'F' || c !== 'H' || c !== 'J' || c !== 'L' || c !== 'N'  || c !== 'P' || c !== 'R' || c !== 'T' || c !== 'V' || c !== 'X' || c !== 'Z' ) {
+      return result ;
 
-        String str = Character.toString(c);
-
-         return ""; }
-
-
-       else {
-         return "";
-       }
-
-    }**/
-
-    for (int i = 0; i < s.length(); i++)  {
-
-       char c = s.charAt(i);
-
-      if (c == 'B' || c == 'D' || c == 'F' || c == 'H' || c == 'J' || c == 'L' || c == 'N'  || c == 'P' || c == 'R' || c == 'T' || c == 'V' || c == 'X' || c == 'Z' ) {
-
-         
-          return new String( String.valueOf(c)) ;
-       } 
-   
-else { return "";}
-     }
-
-    throw new IllegalArgumentException("array must contain a char with code 120");
-
-
-     /** for (int i = 0; i<s.length(); i++) {
-
-
-     String revert = String.valueOf(s); 
-
-     return revert; 
-} **/
-
-}
+   }
 
   /**
    * Method to return the characters in a string that correspond to the &quot;ODD&quot; index
@@ -171,24 +139,43 @@ else { return "";}
    */
    public static String oddsOnly( String s ) {
 
-for (int i = 0; i < s.length(); i++)  {
-       
-       if (s.charAt(i) == 1 || s.charAt(i) == 3 || s.charAt(i) == 5 || s.charAt(i) == 7 || s.charAt(i) == 9 || s.charAt(i) == 11 || s.charAt(i) == 13 || s.charAt(i) == 15 || s.charAt(i) == 17 || s.charAt(i) == 19 || s.charAt(i) == 21 || s.charAt(i) == 23 || s.charAt(i) == 25) 
-       {
-          
-          return "" + String.valueOf(s.charAt(i)) ;
-       } 
-   
-   if (s.charAt(i) == 2 || s.charAt(i) == 4 || s.charAt(i) == 6 || s.charAt(i) == 8 || s.charAt(i) == 10 || s.charAt(i) == 12 || s.charAt(i) == 14 || s.charAt(i) == 16 || s.charAt(i) == 18 || s.charAt(i) == 20 || s.charAt(i) == 22 || s.charAt(i) == 24 || s.charAt(i) == 26) 
-       {
-         return "";}
-else { return "";}
-     }
+   String result = new String();
 
-    throw new IllegalArgumentException("array must contain a char with code 120");
+      for (int i = 0; i < s.length(); i++)  {
+
+         char c = s.charAt(i);
+
+         if (c == 'A' || c == 'C' || c == 'E' || c == 'G' || c == 'I' || c == 'K' || c == 'M'  || c == 'O' || c == 'Q' || c == 'S' || c == 'U' || c == 'W' || c == 'Y' 
+            || c == 'a' || c == 'c' || c == 'e' || c == 'g' || c == 'i' || c == 'k' || c == 'm'  || c == 'o' || c == 'q' || c == 's' || c == 'u' || c == 'w' || c == 'y' 
+
+            ) {
+
+            result += new Character(c).toString();
+         } 
+
+   
+      }
+
+      return result ;
+
+
 
 
    }
+
+   public static String removeDuplicates(String str) {
+
+   String str2 = "" + str.charAt(0);
+    for (int i = 1; i < str.length(); i++) {
+        if (str.charAt(i - 1) == str.charAt(i) && i != 0) {
+            continue;
+        }
+        str2 = str2 + str.charAt(i);
+    }
+    return str2;
+}
+
+
 
   /**
    * Method to return the characters in a string that correspond to the &quot;EVEN&quot; index
@@ -199,29 +186,46 @@ else { return "";}
    */
    public static String evensOnlyNoDupes( String s ) {
 
-for (int i = 0; i < s.length(); i++)  {
-
-       char c = s.charAt(i);
-
-      if (c == 'B' || c == 'D' || c == 'F' || c == 'H' || c == 'J' || c == 'L' || c == 'N'  || c == 'P' || c == 'R' || c == 'T' || c == 'V' || c == 'X' || c == 'Z' ) {
-
-         
-          return new String( String.valueOf(c)) ;
-       } 
-   
-else { return "";}
-     }
-
-    throw new IllegalArgumentException("array must contain a char with code 120");
 
 
-     /** for (int i = 0; i<s.length(); i++) {
+      String result = new String();
+
+          for (int i = 0; i < s.length(); i++) {
+
+            evensOnly(s);
 
 
-     String revert = String.valueOf(s); 
+            String str2 = "" + s.charAt(0);
 
-     return revert; 
-} **/
+               for (int j = 1; j < s.length(); j++) {
+                  if (s.charAt(j - 1) == s.charAt(j) && j != 0) {
+                    continue;
+                  }
+
+                    str2 = s + s.charAt(j);
+               }
+                result = evensOnly(str2);
+
+            
+          }
+          return result; 
+
+
+
+      
+
+/**String result = new String("");
+
+          for (int i = 0; i < s.length(); i++) {
+ 
+             if (removeDuplicates(s).contains(evensOnly(s))) {
+
+              result = result + removeDuplicates(s).contains(evensOnly(s));
+             
+             }
+         }
+
+         return result ;**/
 
 }
    
@@ -235,21 +239,9 @@ else { return "";}
    */
    public static String oddsOnlyNoDupes( String s ) {
 
-      for (int i = 0; i < s.length(); i++)  {
-       
-       if (s.charAt(i) == 1 || s.charAt(i) == 3 || s.charAt(i) == 5 || s.charAt(i) == 7 || s.charAt(i) == 9 || s.charAt(i) == 11 || s.charAt(i) == 13 || s.charAt(i) == 15 || s.charAt(i) == 17 || s.charAt(i) == 19 || s.charAt(i) == 21 || s.charAt(i) == 23 || s.charAt(i) == 25) 
-       {
-          
-          return "" + String.valueOf(s.charAt(i)) ;
-       } 
-   
-   if (s.charAt(i) == 2 || s.charAt(i) == 4 || s.charAt(i) == 6 || s.charAt(i) == 8 || s.charAt(i) == 10 || s.charAt(i) == 12 || s.charAt(i) == 14 || s.charAt(i) == 16 || s.charAt(i) == 18 || s.charAt(i) == 20 || s.charAt(i) == 22 || s.charAt(i) == 24 || s.charAt(i) == 26) 
-       {
-         return "";}
-else { return "";}
-     }
+      return oddsOnly(s);
 
-    throw new IllegalArgumentException("array must contain a char with code 120");
+     
 
 
    }
