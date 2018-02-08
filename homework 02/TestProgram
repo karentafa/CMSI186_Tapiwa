@@ -1,36 +1,55 @@
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  File name     :  StringStuffTester.java
+ *  Purpose       :  A test harness file for testing out the methods in the "StringStuff.java" class
+ *  Author        :  B.J. Johnson
+ *  Date          :  2017-01-25
+ *  Description   :  This file provides the "test harness" for checking out the methods which are part of
+ *                   the homework02 assignment.  It also provides examples of proper documentation, and
+ *                   uses the source file header template as specified in the "Greeter.java" template file
+ *                   for use in CMSI 186, Spring 2017.
+ *  Notes         :  TEMPLATE FILE ONLY: Your job is to fill in as many test cases as you think are needed
+ *                   to thoroughly and completely test your StringStuff class.
+ *  Warnings      :  None
+ *  Exceptions    :  None
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  Revision History
+ *  ----------------
+ *            Rev      Date     Modified by:  Reason for change/modification
+ *           -----  ----------  ------------  -----------------------------------------------------------
+ *  @version 1.0.0  2017-01-25  B.J. Johnson  Initial writing and release
+ *  @version 2.0.0  2017-02-08  B.J. Johnson  Added code to run tests, based on CalendareStuffTester.java
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 public class TestProgram {
-	 public static void main( String args[] ) {
-      String blah = new String( "Blah blah blah" );
-      String woof = new String( "BCDBCDBCDBCDBCD" );
-      String pal1 = new String( "a" );
-      String pal2 = new String( "ab" );
-      String pal3 = new String( "aba" );
-      String pal4 = new String( "amanaplanacanalpanama" );
-      String pal5 = new String( "abba" );
-      System.out.println( containsVowel( blah ) );
-      System.out.println( containsVowel( woof ) );
-      System.out.println( isPalindrome( pal1 ) );
-      System.out.println( isPalindrome( pal2 ) );
-      System.out.println( isPalindrome( pal3 ) );
-      System.out.println( isPalindrome( pal4 ) );
-      System.out.println( isPalindrome( pal5 ) );
-      System.out.println( "evensOnly()        returns: " + evensOnly( "REHEARSALSZ" ) );
-      System.out.println( "evensOnly()        returns: " + evensOnly( "REhearSALsz" ) );
-      System.out.println( "evensOnlyNoDupes() returns: " + evensOnlyNoDupes( "REhearSALsz" ) );
-      System.out.println( "oddsOnly()         returns: " + oddsOnly( "xylophones" ) );
-      System.out.println( "oddsOnly()         returns: " + oddsOnly( "XYloPHonES" ) );
-      System.out.println( "oddsOnlyNoDupes()  returns: " + oddsOnlyNoDupes( "XYloPHonES" ) );
-      System.out.println( "reverse()          returns: " + reverse( "REHEARSALSZ" ) );
+
+  /**
+   * the main method which calls all of the test methods in the class
+   * @param args String[] array containing command line parameters
+   * @return void
+   */
+   public static void main ( String [] args ) {
+      System.out.println( "\nA TOTAL OF SIXTY-SEVEN TESTS TO CHECK OPERATION OF THE STRINGSTUFF CLASS METHODS");
+      test_containsVowel();      // fourteen tests
+      test_isPalindrome();       // eight tests
+      test_evensOnly();          // fill in how many tests
+      test_oddsOnly();           // fill in how many tests
+      test_evensOnlyNoDupes();   // fill in how many tests
+      test_oddsOnlyNoDupes();    // fill in how many tests
+      test_reverse();            // fill in how many tests
+      //test_removeDupes();        // fill in how many tests
    }
 
+  /**
+   * test method to test out the operation of the containsVowel method
+   */
    public static void test_containsVowel() {
       System.out.println( "\nFIFTEEN TESTS FOR containsVowel():" );
       System.out.print( "   Test for all lowercase vowels: " );
-      try { System.out.println( StringStuff.containsVowel( "b" ) ? "true" : "false" ); }
+      try { System.out.println( StringStuff.containsVowel( "I am here" ) ? "true" : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for all uppercase vowels: " );
-      try { System.out.println( StringStuff.containsVowel( "JUMPED OVER THE LAZY DOG." ) ? "true" : "false" ); }
+      try { System.out.println( StringStuff.containsVowel( "ITS ALL UPPER." ) ? "true" : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for detecting lowercase 'a': " );
@@ -82,7 +101,7 @@ public class TestProgram {
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for detecting there are none: " );
-      try { System.out.println( StringStuff.containsVowel( "bdBDBDbd" ) ? "true" : "false" ); }
+      try { System.out.println( StringStuff.containsVowel( "hghghghg" ) ? "true" : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Test for string containing numbers and symbols with 'a' at the end: " );
@@ -101,31 +120,31 @@ public class TestProgram {
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Testing 'ab' should return false: " );
-      try { System.out.println( StringStuff.isPalindrome( "ab" ) ? "true" : "false" ); }
+      try { System.out.println( StringStuff.isPalindrome( "ba" ) ? "true" : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Testing 'aba' should return true: " );
-      try { System.out.println( StringStuff.isPalindrome( "aba" ) ? "true" : "false" ); }
+      try { System.out.println( StringStuff.isPalindrome( "ada" ) ? "true" : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Testing 'amanaplanacanalpanama' should return true: " );
-      try { System.out.println( StringStuff.isPalindrome( "amanaplanacanalpanama" ) ? "true" : "false" ); }
+      try { System.out.println( StringStuff.isPalindrome( "mum" ) ? "true" : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Testing 'ABBA' should return true: " );
-      try { System.out.println( StringStuff.isPalindrome( "ABBA" ) ? "true" : "false" ); }
+      try { System.out.println( StringStuff.isPalindrome( "ADDA" ) ? "true" : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Testing 'RaCeCaR' should return true: " );
-      try { System.out.println( StringStuff.isPalindrome( "RaCeCaR" ) ? "true" : "false" ); }
+      try { System.out.println( StringStuff.isPalindrome( "DaCeCaD" ) ? "true" : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Testing 'madamiamadam' should return false: " );
-      try { System.out.println( StringStuff.isPalindrome( "madamiamadam" ) ? "true" : "false" ); }
+      try { System.out.println( StringStuff.isPalindrome( "dadamiamadad" ) ? "true" : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Testing 'abcdefghigfedcba' should return false: " );
-      try { System.out.println( StringStuff.isPalindrome( "abcdefghigfedcba" ) ? "true" : "false" ); }
+      try { System.out.println( StringStuff.isPalindrome( "ebcdefghigfedcbe" ) ? "true" : "false" ); }
       catch( Exception e ) { System.out.println ( false ); }
 
       System.out.print( "   Testing 'abcdefgh gfedcba' should return false: " );
