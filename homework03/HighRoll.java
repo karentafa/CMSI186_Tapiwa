@@ -3,7 +3,7 @@
  *  Purpose       :  Demonstrates the use of input from a command line for use with Yahtzee
  *  Author        :  Tapiwa Tafa
  *  Date          :  2017-02-14
- *  Description   :  
+ *  Description   :
  *  Notes         :  None
  *  Warnings      :  None
  *  Exceptions    :  None
@@ -28,7 +28,7 @@ public class HighRoll{
       int bestScore = 0;
       int mysum = 0;
       DiceSet myDiceSet = new DiceSet( count, sides );
-      
+
 
 
       System.out.println( "\n   Welcome to the HighRoll!!\n" );
@@ -58,35 +58,36 @@ public class HighRoll{
                break;
             }
                 else if( 'k' == inputLine.charAt(0) ) {
-                     return myDiceSet.roll();
-                    System.out.println( myDiceSet.roll() );
+                    // return myDiceSet.roll();
+                    // System.out.println( myDiceSet.roll() );  THIS METHOD RETURNS VOID SO YOU CAN'T DO THIS
+                    System.out.println( myDiceSet.toString() );
 
 
-                break; 
+                break;
             }
             else if( 'a' == inputLine.charAt(0) ) {
 
-                  
-                break; 
+
+                break;
             }
             else if( 'r' == inputLine.charAt(0) ) {
                      mysum = myDiceSet.sum();
 
                      System.out.println( mysum );
-                break; 
+                break;
             }
             else if( 'e' == inputLine.charAt(0) ) {
 
                     bestScore = mysum;
                     System.out.println(bestScore);
-                break; 
+                break;
             }
              else if( 'n' == inputLine.charAt(0) ) {
 
                System.out.println("your high score is: " + bestScore);
 
 
-                break; 
+                break;
             }
          }
          catch( IOException ioe ) {
