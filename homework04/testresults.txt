@@ -1,0 +1,42 @@
+.
+.
+successful compilation
+.
+.
+
+CLOCK CLASS TESTER PROGRAM
+--------------------------
+
+  Creating a new clock with angle 90 and ts 90: 
+    New clock created: 0.0:0.0:0.0
+    Testing validateAngleArg(90.0)....
+      sending '  90.0 degrees', expecting double value   90.0 - got   90.0
+    Testing validateTimeSliceArg(30.0)....
+      sending '  30.0 degrees', expecting double value   30.0 - got   30.0
+
+
+  Creating a new clock with angle 0 and ts 90: 
+    New clock created: 0.0:0.0:0.0
+    Testing validateAngleArg(0)....
+      sending '  0 degrees', expecting double value   0.0 - got   0.0
+    Testing validateTimeSliceArg(0.0)....
+      sending '  0 degrees', expecting double value   0.0 - got   0.0
+
+
+  Creating a new clock with angle 1000 and ts 1000 
+    New clock created: 0.0:0.0:0.0
+    Testing validateAngleArg(1000)....
+      sending '  1000 degrees', expecting double value   1000 - Exception thrown: java.lang.IllegalArgumentException: Invalid angle value
+    Testing validateTimeSliceArg(1000)....
+      sending '  1000 degrees', expecting double value   1000 - got   1000
+
+Hello world, from the ClockSolver program!!
+
+
+   Sorry you must enter at least one argument
+   Usage: java ClockSolver <angle> [timeSlice]
+   Please try again...........
+
+Hello world, from the ClockSolver program!!
+
+
