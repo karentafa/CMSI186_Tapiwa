@@ -1,0 +1,298 @@
+.                                       
+.                                       
+======================================  
+... Testing Ball class ...              
+======================================  
+New ball made: 
+Testing getXPos (expecting 30.0) 
+30.0
+Testing getYPos (expecting 40.0) 
+40.0
+Testing getXSpeed (expecting 3.0) 
+3.0
+Testing getYSpeed (expecting 4.0) 
+4.0
+Testing toString 
+<30.000,40.000><3.000,4.000>
+.                                       
+.                                       
+.                                       
+.                                       
+======================================  
+... Testing Timer class ...                
+======================================  
+0.0:0.0:0.0
+0.0:0.0:1.0
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim no args...        
+======================================  
+
+SoccerSim program!!
+
+
+   enter at least 4 arguments
+   Usage: java SoccerSim X-Coordinate Y-Coordinate XVelocity YVelocity
+   Please try again...........
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim one arg...        
+======================================  
+
+SoccerSim program!!
+
+
+   Sorry you must enter at least 4 arguments for each ball
+   Usage: java SoccerSim X-Coordinate Y-Coordinate XVelocity YVelocity
+   Please try again...........
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim two args...       
+======================================  
+
+SoccerSim program!!
+
+
+   Sorry you must enter at least 4 arguments for each ball
+   Usage: java SoccerSim X-Coordinate Y-Coordinate XVelocity YVelocity
+   Please try again...........
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim three args...     
+======================================  
+
+SoccerSim program!!
+
+
+   Sorry you must enter at least 4 arguments for each ball
+   Usage: java SoccerSim X-Coordinate Y-Coordinate XVelocity YVelocity
+   Please try again...........
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim six args...       
+======================================  
+
+SoccerSim program!!
+
+
+   Sorry you must enter at least 4 arguments for each ball
+   Usage: java SoccerSim X-Coordinate Y-Coordinate XVelocity YVelocity
+   Please try again...........
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim out of bounds...  
+======================================  
+
+SoccerSim program!!
+
+
+All ball(s) off field, no collisions occured
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim negative time slice...
+======================================  
+
+SoccerSim program!!
+
+
+   Sorry you must enter at least 4 arguments for each ball
+   Usage: java SoccerSim X-Coordinate Y-Coordinate XVelocity YVelocity
+   Please try again...........
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim time slice too large...
+======================================  
+
+SoccerSim program!!
+
+
+   Sorry you must enter at least 4 arguments for each ball
+   Usage: java SoccerSim X-Coordinate Y-Coordinate XVelocity YVelocity
+   Please try again...........
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim time slice value of zero...
+======================================  
+
+SoccerSim program!!
+
+
+   Sorry you must enter at least 4 arguments for each ball
+   Usage: java SoccerSim X-Coordinate Y-Coordinate XVelocity YVelocity
+   Please try again...........
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim check for collision...
+======================================  
+
+SoccerSim program!!
+
+
+0.0:0.0:0.0
+<10.000,10.000><1.000,1.000>
+
+<20.000,20.000><-1.000,-1.000>
+
+0.0:0.0:1.0
+<10.990,10.990><0.990,0.990>
+
+<21.010,21.010><1.010,1.010>
+
+0.0:0.0:2.0
+<11.980,11.980><0.990,0.990>
+
+<22.000,22.000><0.990,0.990>
+
+0.0:0.0:3.0
+<12.970,12.970><0.990,0.990>
+
+<22.990,22.990><0.990,0.990>
+
+0.0:0.0:4.0
+<13.960,13.960><0.990,0.990>
+
+<23.980,23.980><0.990,0.990>
+
+Collision occured
+0.0:0.0:5.0
+<14.950,14.950><0.990,0.990>
+
+<24.970,24.970><0.990,0.990>
+
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim valid ball should come to rest...
+======================================  
+
+SoccerSim program!!
+
+
+0.0:0.0:0.0
+<10.000,10.000><1.000,1.000>
+
+0.0:0.0:1.0
+<10.990,10.990><0.990,0.990>
+
+0.0:0.0:2.0
+<11.980,11.980><0.990,0.990>
+
+0.0:0.0:3.0
+<12.970,12.970><0.990,0.990>
+
+0.0:0.0:4.0
+<13.960,13.960><0.990,0.990>
+
+Collision occured
+0.0:0.0:5.0
+<14.950,14.950><0.990,0.990>
+
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim valid ball should go out of bounds...
+======================================  
+
+SoccerSim program!!
+
+
+0.0:0.0:0.0
+<10.000,10.000><1000.000,1000.000>
+
+0.0:0.0:1.0
+<1.000,1.000><-9.000,-9.000>
+
+0.0:0.0:2.0
+<2.090,2.090><1.090,1.090>
+
+0.0:0.0:3.0
+<3.079,3.079><0.989,0.989>
+
+0.0:0.0:4.0
+<4.069,4.069><0.990,0.990>
+
+0.0:0.0:5.0
+<5.059,5.059><0.990,0.990>
+
+0.0:0.0:6.0
+<6.049,6.049><0.990,0.990>
+
+0.0:0.0:7.0
+<7.040,7.040><0.990,0.990>
+
+0.0:0.0:8.0
+<8.030,8.030><0.990,0.990>
+
+0.0:0.0:9.0
+<9.020,9.020><0.990,0.990>
+
+0.0:0.0:10.0
+<10.010,10.010><0.990,0.990>
+
+0.0:0.0:11.0
+<11.000,11.000><0.990,0.990>
+
+0.0:0.0:12.0
+<11.990,11.990><0.990,0.990>
+
+0.0:0.0:13.0
+<12.980,12.980><0.990,0.990>
+
+0.0:0.0:14.0
+<13.970,13.970><0.990,0.990>
+
+Collision occured
+0.0:0.0:15.0
+<14.960,14.960><0.990,0.990>
+
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim valid ball set six balls subsecond time slice...
+======================================  
+
+SoccerSim program!!
+
+
+   Sorry you must enter at least 4 arguments for each ball
+   Usage: java SoccerSim X-Coordinate Y-Coordinate XVelocity YVelocity
+   Please try again...........
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim valid ball set five balls 1.234 second time slice...
+======================================  
+
+SoccerSim program!!
+
+
+   Sorry you must enter at least 4 arguments for each ball
+   Usage: java SoccerSim X-Coordinate Y-Coordinate XVelocity YVelocity
+   Please try again...........
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim valid ball set ten balls 10 second time slice...
+======================================  
+
+SoccerSim program!!
+
+
+   Sorry you must enter at least 4 arguments for each ball
+   Usage: java SoccerSim X-Coordinate Y-Coordinate XVelocity YVelocity
+   Please try again...........
+.                                       
+.                                       
+======================================  
+... End of SoccerSim Testing...         
+======================================  
