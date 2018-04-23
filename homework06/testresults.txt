@@ -1,0 +1,254 @@
+
+  Hello, world, from the BrobInt program!!
+
+    TESTING CONSTRUCTOR AND CONSTANTS:
+    ==================================
+    Test 001: Making a new BrobInt: 
+        Exception thrown:  
+
+    Test 002: Making a second new BrobInt [same as first]: 
+        Exception thrown:  
+    Test 003: Comparing equality of g1 and g2 with 'equals()': 
+        Exception thrown:  
+
+    Test 004: Making a third new BrobInt [differs at position 47    |]: 
+           [position indicated by down arrow]                  v   
+        Exception thrown:  
+    Test 005: Comparing equality of g1 and g3 [detect different digit]: 
+        Exception thrown:  
+
+    Test 006: Making a fourth new BrobInt [same as g3 but truncated]: 
+        Exception thrown:  
+    Test 007: Comparing equality of g3 and g4 [detect different length prior to detecting different digit]: 
+        Exception thrown:  
+
+    Test 008: Making a fifth new BrobInt, checking BrobInt.ZERO: 
+        Exception thrown:  
+
+    Test 009: Making a sixth new BrobInt, checking BrobInt.ONE: 
+        Exception thrown:  
+
+    Test 010: Making a seventh new BrobInt, checking BrobInt.TEN: 
+        Exception thrown:  
+
+
+    TESTING ADD() AND ADDINT() METHODS:
+    =======================================
+
+    Test 013: Making an eleventh and twelfth new BrobInt, calling add method: 
+        Exception thrown:  
+        Exception thrown:  
+    Test 014: Adding g11 and g12: 
+        Exception thrown:  
+
+    Test 015: Making a thirteenth new BrobInt, calling add methods: 
+        Exception thrown:  
+    Test 016: Adding g11 and g13 [10 + 234567] using bytes: 
+        Exception thrown:  
+    Test 017: Adding g11 and g13 [10 + 234567] using ints: 
+        Exception thrown:  
+    Test 018: Adding g13 and g11 [234567 + 10] using bytes: 
+        Exception thrown:  
+    Test 019: Adding g13 and g11 [234567 + 10] using ints: 
+        Exception thrown:  
+
+    Test 020: Making a fourteenth new BrobInt, calling add methods: 
+        Exception thrown:  
+        Exception thrown:  
+    Test 022: Adding g14 and g15 [-234567 + -10] using bytes: 
+        Exception thrown:  
+    Test 023: Adding g14 and g15 [-234567 + -10] using ints: 
+        Exception thrown:  
+    Test 024: Adding g15 and g14 [-10 + -234567] using bytes: 
+        Exception thrown:  
+    Test 025: Adding g15 and g14 [-10 + -234567] using ints: 
+        Exception thrown:  
+
+    Test 026: Making a sixteenth new BrobInt, calling add methods: 
+        Exception thrown:  
+    Test 027: Adding g14 and g16 [-234567 + -999999] using bytes: 
+        Exception thrown:  
+    Test 028: Adding g14 and g16 [-234567 + -999999] using ints: 
+        Exception thrown:  
+    Test 029: Adding g16 and g14 [-999999 + -234567] using bytes: 
+        Exception thrown:  
+    Test 030: Adding g16 and g14 [-999999 + -234567] using ints: 
+        Exception thrown:  
+
+      Test 031: Adding g1 and g4 using bytes: 
+        Exception thrown:  
+
+      Test 032: Adding g4 and g1 using ints: 
+        Exception thrown:  
+
+
+    TESTING COMPARETO() METHOD:
+    ===========================
+    NOTE: this.compareTo(that) returns: -1 if this < that
+                               returns: +1 if this > that
+                               returns:  0 if this = that
+
+    Test 033: Checking compareTo() method on g1.compareTo g2: 
+      expecting: 0 and got: 0
+
+    Test 034: Checking compareTo() method on g2.compareTo g1: 
+      expecting: 0 and got: 0
+
+    Test 035: Checking compareTo() method on g1.compareTo g3: 
+      expecting: positive value and got: 0
+
+    Test 036: Checking compareTo() method on g3.compareTo g1: 
+      expecting: negative value and got: 0
+
+    Test 037: Checking compareTo() method on g3.compareTo g4: 
+      expecting: positive value and got: 0
+
+    Test 037a: Checking compareTo() method on 123456789.compareTo 234: 
+      expecting: positive value and got: 0
+
+    Test 037b: Checking compareTo() method on 123.compareTo 123456789: 
+      expecting: ngative value and got: 0
+
+    Test 037c: Checking compareTo() method on g3.compareTo 999: 
+      expecting: positive value and got: 0
+
+
+    TESTING SUBTRACTBYTE() METHOD:
+    ==============================
+
+      Test 038: Subtracting g13 take away g11 [234567 - 10] using bytes: 
+        Exception thrown:  
+
+      Test 039: Subtracting g11 take away g13 [10 - 234567] using bytes: 
+        Exception thrown:  
+
+      Test 040: Subtracting g13 take away g15 [234567 - (-10)] using bytes: 
+        Exception thrown:  
+
+      Test 041: Subtracting g15 take away g13 [(-10) - 234567] using bytes: 
+        Exception thrown:  
+
+      Test 042: Subtracting g14 take away g16 [(-234567) - (-999999)] using bytes: 
+        Exception thrown:  
+
+      Test 043: Subtracting g16 take away g14 [(-999999) - (-234567)] using bytes: 
+        Exception thrown:  
+
+      Test 044: Subtracting g1 take away g1 [too long to list] using bytes: 
+        Exception thrown:  
+
+
+    TESTING MULTIPLY() METHOD:
+    ==========================
+
+      Test 045: Multiplying g7 by g12 [10 * 20]: 
+        Exception thrown:  java.lang.NullPointerException
+
+    Test 046: Making a seventeenth new BrobInt: 
+        Exception thrown:  
+
+    Test 047: Making a eightteenth new BrobInt: 
+        Exception thrown:  
+
+    Test 048: Making a nineteenth new BrobInt: 
+        Exception thrown:  
+
+    Test 049: Making a twentieth new BrobInt: 
+        Exception thrown:  
+
+      Test 050: Multiplying g17 by g18 [765 * 23]: 
+        Exception thrown:  java.lang.NullPointerException
+
+      Test 051: Multiplying g18 by g20 [23 * 37]: 
+        Exception thrown:  java.lang.NullPointerException
+
+      Test 052: Multiplying g19 by g20 [56789 * 37]: 
+        Exception thrown:  java.lang.NullPointerException
+
+      Test 053: Multiplying g18 by g17 [23 * 765]: 
+        Exception thrown:  java.lang.NullPointerException
+
+      Test 054: Multiplying g17 by g19 [765 * 56789]: 
+        Exception thrown:  java.lang.NullPointerException
+
+      Test 055: Multiplying g20 by g19 [37 * 56789]: 
+        Exception thrown:  java.lang.NullPointerException
+
+
+    TESTING DIVIDE() METHOD:
+    ========================
+
+      Test 056: Dividing g19 by g20 [56789 / 37]: 
+        Exception thrown:  java.lang.UnsupportedOperationException: 
+         Sorry, that operation is not yet implemented.
+
+      Test 057: Dividing g17 by g20 [765 / 37]: 
+        Exception thrown:  java.lang.UnsupportedOperationException: 
+         Sorry, that operation is not yet implemented.
+
+
+    TESTING REMAINDER() METHOD:
+    ===========================
+
+      Test 058: Modding g17 by g18 [765 % 23]: 
+        Exception thrown:  java.lang.UnsupportedOperationException: 
+         Sorry, that operation is not yet implemented.
+
+      Test 059: Modding g19 by g20 [56789 % 37]: 
+        Exception thrown:  java.lang.UnsupportedOperationException: 
+         Sorry, that operation is not yet implemented.
+
+
+   Welcome to the Fibonacci sequence number finder!
+
+
+
+   Starting from zero, the 23rd Fibonacci number is: 
+
+
+
+  ...HA!! Like I'm going to do the ENTIRE thing for you.....  *grins*
+
+
+   Welcome to the Fibonacci sequence number finder!
+
+
+
+   Starting from zero, the 100th Fibonacci number is: 
+
+
+
+  ...HA!! Like I'm going to do the ENTIRE thing for you.....  *grins*
+
+
+   Welcome to the Fibonacci sequence number finder!
+
+
+
+   Starting from zero, the 250th Fibonacci number is: 
+
+
+
+  ...HA!! Like I'm going to do the ENTIRE thing for you.....  *grins*
+
+
+   Welcome to the Fibonacci sequence number finder!
+
+
+
+   Starting from zero, the 1000th Fibonacci number is: 
+
+
+
+  ...HA!! Like I'm going to do the ENTIRE thing for you.....  *grins*
+
+
+   Welcome to the Fibonacci sequence number finder!
+
+
+
+   Starting from zero, the 10000th Fibonacci number is: 
+
+
+
+  ...HA!! Like I'm going to do the ENTIRE thing for you.....  *grins*
